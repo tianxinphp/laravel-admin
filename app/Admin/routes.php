@@ -11,5 +11,6 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index');
-
+    //资源路由
+    $router->resource('users', App\Admin\Controllers\UserController::class);
 });
