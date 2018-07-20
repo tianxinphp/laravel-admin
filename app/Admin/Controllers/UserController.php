@@ -33,19 +33,7 @@ class UserController extends Controller
                     ['text'=>'users','url'=>'/users'],
                     ['text'=>'index']
             );
-            $content->row(function (Row $row){
-                $row->column(2,'foo');
-                $row->column(8, function (Column $column){
-                    $column->row('sdsd');
-                    $column->row(function (Row $row){
-                        $row->column(4,'10');
-                        $row->column(4,'1');
-                        $row->column(4,'1');
-                    });
-                });
-                $row->column(2, 'baz');
-            });
-//            $content->body($this->grid());
+            $content->body($this->grid());
         });
     }
 
@@ -90,9 +78,7 @@ class UserController extends Controller
     protected function grid()
     {
         return Admin::grid(User::class, function (Grid $grid) {
-
             $grid->id('ID')->sortable();
-
             $grid->created_at();
             $grid->updated_at();
         });
@@ -106,9 +92,7 @@ class UserController extends Controller
     protected function form()
     {
         return Admin::form(User::class, function (Form $form) {
-
             $form->display('id', 'ID');
-
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
