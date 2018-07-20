@@ -26,13 +26,13 @@ class UserController extends Controller
 
             $content->header('header');
             $content->description('description');
-            $content->breadcrumb(
+            dd($content->breadcrumb(
                 [
                     ['text'=>'root'],
                     ['text'=>'users','url'=>'/users'],
                     ['text'=>'index']
                 ]
-            );
+            ));
 
 
 //            $content->body($this->grid());
