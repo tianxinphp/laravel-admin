@@ -7,6 +7,7 @@ use App\User;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
+use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
@@ -33,9 +34,12 @@ class UserController extends Controller
                     ['text'=>'index']
             );
             $content->row(function (Row $row){
-                $row->column(4,'foo');
-                $row->column(4, 'bar');
-                $row->column(4, 'baz');
+                $row->column(2,'foo');
+                $row->column(8, function (Column $column){
+                    $column->row('sdsd');
+                    $column->row('sdsdfdsfdsd');
+                });
+                $row->column(2, 'baz');
             });
 //            $content->body($this->grid());
         });
