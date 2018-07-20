@@ -27,11 +27,9 @@ class UserController extends Controller
             $content->header('header');
             $content->description('description');
             dd($content->breadcrumb(
-                [
                     ['text'=>'root'],
                     ['text'=>'users','url'=>'/users'],
                     ['text'=>'index']
-                ]
             ));
 
 
