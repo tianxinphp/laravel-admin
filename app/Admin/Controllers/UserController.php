@@ -10,6 +10,7 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Layout\Row;
 
 class UserController extends Controller
 {
@@ -26,13 +27,14 @@ class UserController extends Controller
 
             $content->header('header');
             $content->description('description');
-            dd($content->breadcrumb(
+            $content->breadcrumb(
                     ['text'=>'root'],
                     ['text'=>'users','url'=>'/users'],
                     ['text'=>'index']
-            ));
-
-
+            );
+            $content->row(function (Row $row){
+                $row->column(4,'foo');
+            });
 //            $content->body($this->grid());
         });
     }
