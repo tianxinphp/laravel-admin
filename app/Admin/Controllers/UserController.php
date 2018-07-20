@@ -37,7 +37,11 @@ class UserController extends Controller
                 $row->column(2,'foo');
                 $row->column(8, function (Column $column){
                     $column->row('sdsd');
-                    $column->row('fgfg');
+                    $column->row(function (Row $row){
+                        $row->column(4,'10');
+                        $row->column(4,'1');
+                        $row->column(4,'1');
+                    });
                 });
                 $row->column(2, 'baz');
             });
