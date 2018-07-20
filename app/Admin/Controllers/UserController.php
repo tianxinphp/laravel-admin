@@ -34,6 +34,8 @@ class UserController extends Controller
             );
             $content->row(function (Row $row){
                 $row->column(4,'foo');
+                $row->column(4, 'bar');
+                $row->column(4, 'baz');
             });
 //            $content->body($this->grid());
         });
