@@ -2,18 +2,16 @@
 
 namespace App\Admin\Controllers;
 
-use App\User;
+use App\Article;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
-use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
-use Encore\Admin\Layout\Row;
 
-class UserController extends Controller
+class ArticleController extends Controller
 {
     use ModelForm;
 
@@ -28,11 +26,7 @@ class UserController extends Controller
 
             $content->header('header');
             $content->description('description');
-            $content->breadcrumb(
-                    ['text'=>'root'],
-                    ['text'=>'users','url'=>'/users'],
-                    ['text'=>'index']
-            );
+
             $content->body($this->grid());
         });
     }
@@ -77,8 +71,10 @@ class UserController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(User::class, function (Grid $grid) {
+        return Admin::grid(Article::class, function (Grid $grid) {
+
             $grid->id('ID')->sortable();
+
             $grid->created_at();
             $grid->updated_at();
         });
@@ -91,8 +87,10 @@ class UserController extends Controller
      */
     protected function form()
     {
-        return Admin::form(User::class, function (Form $form) {
+        return Admin::form(Article::class, function (Form $form) {
+
             $form->display('id', 'ID');
+
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
