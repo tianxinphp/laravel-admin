@@ -13,4 +13,7 @@ Route::group([
     $router->get('/', 'HomeController@index');
     //资源路由
     $router->resource('users', UserController::class);
+    //articles
+    $router->resource('articles',ArticleController::class);
+
 });
