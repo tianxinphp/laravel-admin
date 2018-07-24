@@ -60,7 +60,8 @@ class ArticleController extends Controller
             $content->header('header');
             $content->description('description');
 
-            $content->body($this->form());
+//            $content->body($this->form());
+            $content->body(view('article/create'));
         });
     }
 
