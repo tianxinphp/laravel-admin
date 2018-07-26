@@ -1,0 +1,13 @@
+{
+    "name": "tianxin/markdown-editer-laravel",
+    "description": "markdown editor for laravel",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tianxin",
+            "email": "844577216@qq.com"
+        }
+    ],
+    "require": {}
+}
