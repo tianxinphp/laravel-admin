@@ -28,7 +28,8 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Tianxin\\Markdown-editer-laravel":"packages/tianxin/markdown-editer-laravel/src"
         }
     },
     "autoload-dev": {
