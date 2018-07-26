@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace tianxin\MarkdownEditer;
 
 use Illuminate\Support\ServiceProvider;
 
