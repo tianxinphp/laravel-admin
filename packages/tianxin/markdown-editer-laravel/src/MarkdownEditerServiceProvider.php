@@ -13,7 +13,11 @@ class MarkdownEditerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //启动boot配置
+        $this->publishes([__DIR__.'/.../public/'=>public_path('')]);//注册公共资源
+
+        $this->publishes([__DIR__.'/../config/editormd.php'=>config_path('editormd.php')]);//注册配置文件
+
     }
 
     /**
@@ -23,6 +27,6 @@ class MarkdownEditerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
     }
 }
