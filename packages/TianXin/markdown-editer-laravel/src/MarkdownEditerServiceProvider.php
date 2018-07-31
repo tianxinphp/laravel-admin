@@ -1,7 +1,8 @@
 <?php
 
-namespace tianxin\MarkdownEditer;
+namespace TianXin\MarkdownEditer;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class MarkdownEditerServiceProvider extends ServiceProvider
@@ -18,6 +19,10 @@ class MarkdownEditerServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__.'/../config/editormd.php'=>config_path('editormd.php')]);//注册配置文件
 
+
+        if (!$this->app->routesAreCached()) {
+            Route::post('/upload/editormd/image','TianXin\MarkdownEditer\Controllers\MarkdownEditerController@uploadimage');
+        }
     }
 
     /**
