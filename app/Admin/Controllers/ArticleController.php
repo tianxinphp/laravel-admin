@@ -57,10 +57,10 @@ class ArticleController extends Controller
     {
         return Admin::content(function (Content $content) {
             $content->header(trans('admin.create'));
-            $content->description(trim('admin.description'));
+            $content->description(trans('admin.description'));
 //            $content->breadcrumb();
             Admin::css('/vendor/editormd/css/editormd.min.css');
-            Admin::js('/vendor/editormd/css/editormd.js');
+            Admin::js('/vendor/editormd/js/editormd.js');
             $content->body(view('article/create'));
         });
     }
