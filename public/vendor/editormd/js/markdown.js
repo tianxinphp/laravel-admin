@@ -7,6 +7,6 @@ $(function () {
     EditormdConfig=
     Editormd = editormd({
         id: "editormd_id",
-        path : "../lib/"
+        path : "../../lib/"
     });
 });
