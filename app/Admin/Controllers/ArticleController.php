@@ -59,8 +59,8 @@ class ArticleController extends Controller
             $content->header(trans('admin.create'));
             $content->description(trans('admin.description'));
             $content->breadcrumb(
-                ['text'=>trans('admin.indexPage'),'url'=>\URL::full()],
-                ['text'=>trans('admin.article.list'),'url'=>url()],
+                ['text'=>trans('admin.indexPage'),'url'=>'/admin'],
+                ['text'=>trans('admin.article.list'),'url'=>'/admin'],
                 ['text'=>trans('admin.article.create')]
             );
             Admin::css('/vendor/editormd/css/editormd.min.css');
