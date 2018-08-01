@@ -40,7 +40,7 @@ echo $table->render();
 
 $tab = new Tab();
 
-$tab->add('Pie', $pie);
+$tab->add('Pie', '2222');
 $tab->add('Table', new Table());
 $tab->add('Text', 'blablablabla....');
 
