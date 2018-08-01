@@ -3,8 +3,8 @@ use Encore\Admin\Widgets\Form;
 
 
 
-
-echo Form::textarea('markdown','markdown')->rows(10);
+$Form=new Form;
+echo $Form->textarea('markdown','markdown')->rows(10);
 
 
 ?>
