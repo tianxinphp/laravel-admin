@@ -4,7 +4,7 @@ use Encore\Admin\Widgets\Form;
 
 
 $Form=new Form;
-$Form->textarea('markdown','markdown')->rows(10);
+echo $Form->textarea('markdown')->rows(10);
 
 
 ?>
