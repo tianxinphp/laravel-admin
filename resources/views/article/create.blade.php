@@ -4,7 +4,7 @@ use Encore\Admin\Widgets\Form;
 
 
 $Form=new Form;
-echo $Form->textarea('markdown')->rows(10);
+print_r($Form->textarea('markdown')->rows(10)->getViewElementClasses());
 
 
 ?>

@@ -109,4 +109,9 @@ return [
         'filter_clear'       => '显示全部',
         'filter_placeholder' => '过滤',
     ],
+    'indexPage'=>'首页',
+   'article'=>[
+        'list'=>'文章列表',
+       'create'=>'创建文章',
+   ]
 ];
