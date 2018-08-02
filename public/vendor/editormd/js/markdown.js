@@ -6,6 +6,7 @@ $(function () {
     };
     Editormd = editormd({
         id: "editormd_id",
-        path:window.location.protocol+'//'+window.location.host+'/vendor/editormd/lib/'
+        path:window.location.protocol+'//'+window.location.host+'/vendor/editormd/lib/',
+        height:'700'
     });
 });
