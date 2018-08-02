@@ -7,7 +7,7 @@ $(function () {
     Editormd = editormd({
         id: "editormd_id",
         path:window.location.protocol+'//'+window.location.host+'/vendor/editormd/lib/',
-        height:'700',
+        height:'100%',
         width: '100%'
     });
 });
