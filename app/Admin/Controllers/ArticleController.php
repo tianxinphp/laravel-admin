@@ -66,8 +66,7 @@ class ArticleController extends Controller
             Admin::css('/vendor/editormd/css/editormd.min.css');
             Admin::js('/vendor/editormd/js/editormd.js');
             Admin::js('/vendor/editormd/js/markdown.js');
-            $content->row('sss');
-            $content->row(view('article/create'));
+            $content->body(view('article/create'));
         });
     }
 
